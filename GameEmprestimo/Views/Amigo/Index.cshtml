@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Amigos";
+}
+<div class="row">
+    <h4>Amigos</h4>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered" id="tabelaAmigos"></table>
+    </div>
+    <div class="text-right">
+        <button type="button" class="btn btn-primary" id="btnCadastrarAmigo">Cadastrar amigo</button>
+    </div>
+    @Html.Partial("_InformacoesAmigo", new AmigoViewModel())
+</div>
+@section Scripts {
+    @*@await Html.PartialAsync("_ValidationScriptsPartial")*@
+    <script type="text/javascript" language="javascript" src="~/Scripts/Game/Amigo/amigo.js"></script>
+    <script type="text/javascript" language="javascript" src="~/Scripts/Game/lib/datatables/datatables.min.js"></script>
+
+
+    @*<script type="text/javascript" language="javascript" src="lib/datatables/datatables.min.js"></script>*@
+    @*<script type="text/javascript" language="javascript" src="js/amigo.js"></script>*@
+}

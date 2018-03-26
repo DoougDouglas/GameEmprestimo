@@ -1,0 +1,41 @@
+﻿
+@model EmprestimoViewModel
+<div class="modal fade" id="modalEmprestimo" tabindex="-1" role="dialog" aria-labelledby="modalEmprestimo" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Empréstimo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form id="formModalEmprestimo" action="" method="post">
+                        <input type="hidden" for="Codigo" id="hddCodigo" />
+                        <div class="text-danger"></div>
+                        <div class="form-group">
+                            @Html.LabelFor(a => a.CodigoAmigo, new { @class= "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(a => a.CodigoAmigo, new SelectList(Model.Amigos, "Codigo", "Nome"), "Selecione um Amigo", new { id = "ddlAmigosEmprestimo", @class = "form-control required" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(a => a.CodigoTitulo, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(a => a.CodigoTitulo, new SelectList(Model.Titulos, "Codigo", "Nome"), "Selecione um Console", new { id = "ddlTitulosEmprestimo", @class= "form-control required" })
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" id="btnSalvarEmprestimo">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @*@{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }*@
+}

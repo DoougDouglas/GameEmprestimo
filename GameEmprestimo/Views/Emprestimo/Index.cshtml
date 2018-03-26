@@ -1,0 +1,27 @@
+﻿@model EmprestimoViewModel
+@{
+    ViewData["Title"] = "Empréstimos";
+}
+<div class="row">
+    <div class="row" style="margin-top: 10px">
+        <div class="text-right">
+            <button type="button" class="btn btn-primary" id="btnCadastrarEmprestimo">Cadastrar Empréstimo</button>
+        </div>
+    </div>
+    <div class="row">
+        <h4>Empréstimos em andamento</h4>
+        <hr />
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="tabelaEmprestimosEmAndamento"></table>
+        </div>
+    </div>
+
+    @Html.Partial("_InformacoesEmprestimo", Model)
+</div>
+@section Scripts {
+    @*@await Html.PartialAsync("_ValidationScriptsPartial")
+        <script type="text/javascript" language="javascript" src="lib/datatables/datatables.min.js"></script>
+        <script type="text/javascript" language="javascript" src="js/emprestimo.js"></script>*@
+    <script type="text/javascript" language="javascript" src="~/Scripts/Game/Emprestimo/emprestimo.js"></script>
+    <script type="text/javascript" language="javascript" src="~/Scripts/Game/lib/datatables/datatables.min.js"></script>
+}

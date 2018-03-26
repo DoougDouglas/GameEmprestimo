@@ -1,0 +1,20 @@
+﻿@model JogoViewModel
+@{
+    ViewData["Title"] = "Jogos";
+}
+<div class="row">
+    <h4>Jogos</h4>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered" id="tabelaJogos"></table>
+    </div>
+    <div class="text-right">
+        <button type="button" class="btn btn-primary" id="btnCadastrarJogo">Cadastrar jogo</button>
+    </div>
+    @Html.Partial("_InformacoesJogo", new ManutencaoJogoViewModel { Consoles = Model.Consoles })
+</div>
+@section Scripts {
+    @*@await Html.PartialAsync("_ValidationScriptsPartial")*@
+    <script type="text/javascript" language="javascript" src="~/Scripts/Game/lib/datatables/datatables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="~/Scripts/Game/Jogo/jogo.js"></script>
+}

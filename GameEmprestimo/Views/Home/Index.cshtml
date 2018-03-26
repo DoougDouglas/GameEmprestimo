@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Controle de Empréstimos</h1>
+    <h2>Tecnologias</h2>
+    <ul>
+        <li>Aplicação desenvolvida utilizando ASP.NET MVC 5</li>
+        <li>Login - Foi utilizado o Identity.</li>
+        <li>Acesso a dados - EntityFramework</li>
+        <li>Exibição de dados em lista - DataTables</li>
+        <li>Mensagens de alerta e confirmação - Bootbox.js</li>
+        <li>Máscaras - MaskedInput</li>
+    </ul>
+    <h2>Arquitetura</h2>
+    <ul>
+        <li>
+            O projeto foi estruturado em camadas, cada uma com uma responsabilidade, sendo elas:
+            <ul>
+                <li>Projeto(Aplicação): ASP.NET MVC 5, WebApi, jQuery e plugins, Bootstrap e Unity (Responsável por gerenciar as injeções de dependência).</li>
+                <li>CrossCutting: Pode ser referenciado por todos os outros projetos da solução sendo com que a mesma se torne uma camada transversal e nela podem ser definidas as classes e funcionalidades que podem ser comum entre os projetos, como métodos de extensão por exemplo.</li>
+                <li>Projeto.Domain: Onde estão localizadas as classes de domínio da aplicação.</li>
+                <li>Projeto.Data: Onde estão localizadas as classes de acesso a dados da aplicação.</li>
+            </ul>
+        </li>
+        <li>As consultas para montagem das grids estão sendo paginadas e ordenadas em memória.</li>
+    </ul>
+</div>
+
+<div class="row">
+
+</div>

@@ -1,0 +1,5 @@
+C:\Douglas\Particular\Projeto_Douglas_Teste\Game\GameEmprestimo\Projeto.CrossCutting\bin\Debug\Projeto.CrossCutting.dll
+C:\Douglas\Particular\Projeto_Douglas_Teste\Game\GameEmprestimo\Projeto.CrossCutting\bin\Debug\Projeto.CrossCutting.pdb
+C:\Douglas\Particular\Projeto_Douglas_Teste\Game\GameEmprestimo\Projeto.CrossCutting\obj\Debug\Projeto.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Douglas\Particular\Projeto_Douglas_Teste\Game\GameEmprestimo\Projeto.CrossCutting\obj\Debug\Projeto.CrossCutting.dll
+C:\Douglas\Particular\Projeto_Douglas_Teste\Game\GameEmprestimo\Projeto.CrossCutting\obj\Debug\Projeto.CrossCutting.pdb

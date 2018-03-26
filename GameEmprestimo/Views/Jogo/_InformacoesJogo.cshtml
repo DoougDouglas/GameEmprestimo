@@ -1,0 +1,47 @@
+﻿
+@model ManutencaoJogoViewModel
+<div class="modal fade" id="modalJogo" tabindex="-1" role="dialog" aria-labelledby="modalJogo" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Jogo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <form id="formModalJogo" action="" method="post">
+                        @Html.Hidden("hddCodigo", Model.Codigo)
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            @Html.LabelFor(a => a.Nome, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(a => a.Nome, new { @class = "form-control required" , maxlength = "100" , id= "txtNomeJogo" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(a => a.AnoLancamento, new { @class= "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(a => a.AnoLancamento, new { @class = "form-control required" , id= "txtAnoLancamentoJogo", maxlength = "4" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(a => a.CodigoConsole, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(a => a.CodigoConsole, new SelectList(Model.Consoles, "Codigo", "Descricao"), "Selecione um Console", new { id= "ddlConsoleJogo", @class="form-control required", name="Console" })
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" id="btnSalvarJogo">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @*@{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }*@
+}
